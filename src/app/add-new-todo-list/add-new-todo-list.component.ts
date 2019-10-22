@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-new-todo-list.component.scss']
 })
 export class AddNewTodoListComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit() {
   }
 
