@@ -5,6 +5,7 @@ import { AddNewTodoListComponent } from './add-new-todo-list/add-new-todo-list.c
 import { ViewItemComponent } from './view-item/view-item.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ViewItemComponent } from './view-item/view-item.component';
 
 @NgModule({
   declarations: [
