@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Add-new-todo-list';
+  data: AppData = {todos: [{
+    title: 'First todo', completed: true},
+    {title: 'Second todo', completed: false}]};
 }
 export interface Todo {
   title: string;
