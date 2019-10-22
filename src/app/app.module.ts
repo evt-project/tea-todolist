@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AddItemComponent } from './add-item/add-item.component';
-import { AddNewTodoListComponent } from './add-new-todo-list/add-new-todo-list.component';
 import { AppComponent } from './app.component';
+import { AddNewTodoListComponent } from './add-new-todo-list/add-new-todo-list.component';
 import { ViewItemComponent } from './view-item/view-item.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
