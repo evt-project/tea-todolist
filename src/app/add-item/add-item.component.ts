@@ -8,7 +8,7 @@ import { Component, OnInit} from '@angular/core';
 
 export class AddItemComponent implements OnInit {
   itemTitle: string;
-  itemDescription?: string;
+  itemDescription: string;
 
   ngOnInit() {
     this.itemTitle = '';
