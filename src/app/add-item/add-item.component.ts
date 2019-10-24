@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-add-item',
@@ -6,31 +6,32 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./add-item.component.scss'],
 })
 
-export class AddItemComponent implements OnInit {
+export class AddItemComponent {
   items = [];
-  // itemList -> chenge next whit the list of lists for choice one
+  // itemList -> change next with the list of lists for first choice
   itemList = 'example';
-  itemID: number = this.items.length + 1;
-  itemTitle: string;
-  itemDescription: string;
-
-  ngOnInit() {
-    this.itemTitle = '';
-    this.itemDescription = '';
-  }
+  itemTitle = '';
+  itemDescription = '';
 
   addItem() {
     this.items.push({
       list: this.itemList,
-      id: this.itemID,
+      id: this.uniqueIDS(20, '0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!*#-'),
       title: this.itemTitle,
       description: this.itemDescription,
       completed: false,
     });
+    this.itemTitle = '';
+    this.itemDescription = '';
+  }
 
-    this.itemID++;
+  uniqueIDS(length, chars) {
+    let IDS = '';
+    for (let i = length; i > 0; --i) {
+      IDS += chars[Math.floor(Math.random() * chars.length)];
+    }
 
-    this.ngOnInit();
+    return IDS;
   }
 
 }
