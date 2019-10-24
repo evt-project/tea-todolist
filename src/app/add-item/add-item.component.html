@@ -1,0 +1,7 @@
+<section class="add-item-section">
+    <div class="add-item-content">
+        <input type="text" class="add-textbox add-title" placeholder="Add the best title ever!" [(ngModel)]="itemTitle"/>
+        <input type="text" class="add-textbox add-description" placeholder="Add a description for the best todo item!" [(ngModel)]="itemDescription"/>
+        <input type="button" class="add-button" value="+" (click)="addItem()"/>
+    </div>
+</section>

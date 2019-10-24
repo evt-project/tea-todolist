@@ -1,0 +1,63 @@
+textarea,
+select,
+input,
+button{
+    outline: none;
+}
+.add-item-section {
+    border-bottom: 1px solid #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+.add-item-section::before{
+    content: "H";
+    position: relative;
+    bottom: 70px;
+    left: 24%;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.add-item-content {
+    width: 50%;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+}
+input.add-textbox {
+    width: 100%;
+    margin: 8px;
+}
+input.add-title {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+input.add-description{
+    font-size: 1em;
+    padding: 10px;
+}
+input::-webkit-input-placeholder{
+    font-size: 0.6em;
+}
+input.add-button {
+    background: #6ccccc;
+    height: 70px;
+    width: 70px;
+    border: none;
+    border-radius: 10px;
+    color: #f6f6f6;
+    font-weight: 100;
+    text-align: center;
+    font-size: 2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
