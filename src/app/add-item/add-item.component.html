@@ -7,5 +7,7 @@
 </section>
 
 <section class="items-content">
-    <app-todo-item *ngFor="let item of items"></app-todo-item>
+    <div class="item-content" *ngIf="items.length > 0">
+        <app-todo-item *ngFor="let item of items" [items]= "item"></app-todo-item>
+    </div>
 </section>
