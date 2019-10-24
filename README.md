@@ -1,5 +1,9 @@
 # TeaTodolist
 
+## Build Status
+Master: [![Build Status](https://travis-ci.org/evt-project/tea-todolist.svg?branch=master)](https://travis-ci.org/evt-project/tea-todolist)
+Develop: [![Build Status](https://travis-ci.org/evt-project/tea-todolist.svg?branch=develop)](https://travis-ci.org/evt-project/tea-todolist)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
 ## Development server
