@@ -11,10 +11,15 @@ export class AddNewTodoListComponent {
     title: 'First todo', completed: true},
     {title: 'Second todo', completed: false}]};
 }
-export interface Todo {
+
+interface TodoItem {
+  list: string;
+  id: number;
   title: string;
+  description?: string;
   completed: boolean;
 }
+
 export interface AppData {
   todos: Array<Todo>;
 }
