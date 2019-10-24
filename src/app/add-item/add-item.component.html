@@ -5,9 +5,3 @@
         <input type="button" class="add-button" value="+" (click)="addItem()"/>
     </div>
 </section>
-
-<section class="items-content">
-    <div class="item-content" *ngIf="items.length > 0">
-        <app-todo-item *ngFor="let item of items" [items]= "item"></app-todo-item>
-    </div>
-</section>
