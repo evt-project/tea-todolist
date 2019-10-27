@@ -1,5 +1,12 @@
-import { Component } from '@angular/core';
-import { Item } from '../model';
+import { Component, Input } from '@angular/core';
+
+export interface TodoItem {
+  list: string;
+  id: number;
+  title: string;
+  description?: string;
+  completed: boolean;
+}
 
 @Component({
   selector: 'app-todo-item',
@@ -8,9 +15,9 @@ import { Item } from '../model';
 })
 
 export class ViewItemComponent {
-  item: Item = {
+  @Input() item: TodoItem = {
     list: 'example',
-    id: 'Axsd11',
+    id: 1,
     title: 'Example title',
     description: 'an example list item for the view model',
     completed: false,

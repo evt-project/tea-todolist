@@ -1,0 +1,14 @@
+<div *ngFor="let item of items">
+    <div class="item">
+        <div class="item-header">
+            <h1 class="item-title">{{ item.title }}</h1>
+            <div class="item-list">
+                <img class="icon-registry" src="https://img.icons8.com/pastel-glyph/64/000000/spiral-bound-booklet.png">
+                <p class="list">{{ item.list }}</p>
+            </div>
+        </div>
+        <div class="item-content">
+            <p class="item-descr">{{ item.description }}</p>
+        </div>
+    </div>
+</div>
