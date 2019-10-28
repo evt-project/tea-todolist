@@ -11,8 +11,8 @@ import { ViewItemComponent } from './view-item/view-item.component';
   declarations: [
     AppComponent,
     AddItemComponent,
-    ViewItemComponent,
     ListItemComponent,
+    ViewItemComponent,
   ],
   imports: [
     BrowserModule,
