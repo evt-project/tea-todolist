@@ -15,7 +15,7 @@ interface TodoItem {
 })
 
 export class ViewItemComponent {
-  items: TodoItem = {
+  item: TodoItem = {
     list: 'example',
     id: 1,
     title: 'Example title',
