@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Item, List } from '../model';
+import { List } from '../model';
 
 @Injectable({
   providedIn: 'root',
@@ -39,8 +39,9 @@ export class DataService {
     return this.data;
   }
   // Add an item in a specific list
-  addItem(idList: string, todo: Item) {
-    this.data.map(x => (x.id === idList) ? x.item.push(todo) : false);
+  addItem(idList: string, ...todo) {
+    const list = this.data.find((x) => x.id === idList);
+    list.item = list.item.concat(todo);
   }
   // Add a list whit an item inside, or an empty list
   addList(list: List) {
@@ -48,10 +49,11 @@ export class DataService {
   }
   // Remove an item form a specific list
   removeItem(idList: string, idItem: string) {
-    this.data.map(x => (x.id === idList) ? x.item = x.item.filter(a => a.id !== idItem) : false);
+    const list = this.data.find((x) => x.id === idList);
+    list.item = list.item.filter((x) => x.id !== idItem);
     // can we add if the length of data[0][list] is <= 0 remove the list
   }
-  // // Remove a list
+  // Remove a list
   removeList(idList: string) {
     this.data = this.data.filter(x => x.id !== idList);
   }
