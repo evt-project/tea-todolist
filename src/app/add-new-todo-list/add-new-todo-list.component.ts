@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-new-todo-list.component.scss']
 })
 export class AddNewTodoListComponent {
+  todos = [
+    {
+      label: ''
+    }];
+
+  addTodo(newTodoLabel){
+    var newTodo = {
+      label: newTodoLabel,
+    };
+    this.todos.push(newTodo);
+  }
 }

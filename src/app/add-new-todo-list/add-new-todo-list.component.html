@@ -1,1 +1,12 @@
-<input type='text' placeholder='Add new todo item'>
+<div class="add-list-content">
+  <input type="text" class="add-list-title" #newTodoList placeholder="Add title to your list"/>
+  <button (click)="addTodo(newTodoList.value); newTodoList.value=''">Add Title</button>
+  <input type="text" class="add-item" #newTodo placeholder="Add todo to your list"/>
+  <button (click)="addTodo(newTodo.value); newTodo.value=''">Add Todo</button>
+</div>
+<table>
+  <tr *ngFor="let todo of todos">
+    <th>{{todo.listTitle}}</th>
+    <td>{{todo.label}}</td>
+  </tr>
+</table>
