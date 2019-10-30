@@ -1,12 +1,16 @@
 <div class="add-list-content">
-  <input type="text" class="add-list-title" #newTodoList placeholder="Add title to your list"/>
-  <button (click)="addTodo(newTodoList.value); newTodoList.value=''">Add Title</button>
-  <input type="text" class="add-item" #newTodo placeholder="Add todo to your list"/>
-  <button (click)="addTodo(newTodo.value); newTodo.value=''">Add Todo</button>
+  <div class="add-list-title">
+    <input type="text" #newTodoList placeholder="Add title to your list"/>
+    <button (click)="addTodo(newTodoList.value); newTodoList.value=''">Add Title</button>
+  </div>
+  <div class="add-item">
+    <input type="text" #newTodo placeholder="Add todo to your list"/>
+    <button (click)="addTodo(newTodo.value); newTodo.value=''">Add Todo</button>
+  </div>
 </div>
 <table>
   <tr *ngFor="let todo of todos">
-    <th>{{todo.listTitle}}</th>
-    <td>{{todo.label}}</td>
+    <th class="list-title">{{todo.listTitle}}</th>
+    <td class="todo-label">{{todo.label}}</td>
   </tr>
 </table>
