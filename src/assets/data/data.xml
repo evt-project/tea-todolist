@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<lists>
+    <list title="Spesa">
+        <item done="false" title="Uova"></item>
+        <item done="true" title="Guanciale" />
+        <item done="false" title="Pasta">Prendere gli spaghetti</item>
+        <item done="false" title="Pepe nero" />
+        <item done="false" title="Sale" />
+    </list>
+    <list name="How to write a novel">
+        <item>
+            <title>Have an Idea</title>
+            <descr>You really can't write a novel unless you know what you are going to write about</descr>
+            <done>true</done>
+        </item>
+        <item>
+            <title>Know What the Story is About</title>
+            <done>true</done>
+        </item>
+        <item done="false" title="Do Preliminary Research" />
+        <item done="false" title="Sit and Write">At least 40 minutes a day</item>
+        <item done="false" title="Proofread the text" />
+        <item done="false" title="Print the text" />
+    </list>
+</lists>
