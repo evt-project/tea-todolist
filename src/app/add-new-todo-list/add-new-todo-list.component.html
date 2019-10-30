@@ -9,8 +9,8 @@
   </div>
 </div>
 <table>
+  <th class="list-title">{{todo.listTitle}}</th>
   <tr *ngFor="let todo of todos">
-    <th class="list-title">{{todo.listTitle}}</th>
     <td class="todo-label">{{todo.label}}</td>
   </tr>
 </table>
