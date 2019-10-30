@@ -1,18 +1,14 @@
 .add-list-content {
-  width: 40%;
-  float: left;
-  border-bottom: 1px solid #777;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  width: 45%;
   padding: 20px;
+  background: #f6f6f6;
 }
 .add-list-title {
-
+  padding: 10px;
+  border-bottom: 1px solid #777;
 }
 .add-item {
-  margin: auto;
+  padding: 10px;
 }
 .list-title {
   font-size: 1.3em;
