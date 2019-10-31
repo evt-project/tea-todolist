@@ -6,15 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-new-todo-list.component.scss'],
 })
 export class AddNewTodoListComponent {
-  todos = [
-    {
-      label: '',
-    }];
+  todos = [];
+  listTitle = '';
+  label = '';
 
-  addTodo(newTodoLabel) {
-    const newTodo = {
-      label: newTodoLabel,
-    };
-    this.todos.push(newTodo);
+  addTodo() {
+    this.todos.push({
+      title: this.listTitle,
+      description: this.label,
+    });
+    this.listTitle = '';
+    this.label = '';
   }
 }
