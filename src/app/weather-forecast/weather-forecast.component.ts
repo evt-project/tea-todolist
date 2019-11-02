@@ -4,7 +4,7 @@ import { WeatherForecastApiService } from './weatherForecastApiService/weather-f
 @Component({
     selector: 'app-weather-forecast',
     templateUrl: './weather-forecast.component.html',
-    styleUrls: ['./weather-forecast.component.scss']
+    styleUrls: ['./weather-forecast.component.scss'],
 })
 export class WeatherForecastComponent implements OnInit {
     response: object;
@@ -12,7 +12,6 @@ export class WeatherForecastComponent implements OnInit {
 
     ngOnInit() {
         this.retriveWF();
-        console.log('non so se funziona');
     }
     private retriveWF() {
         this.wfas.getOBS().subscribe((response) => {
