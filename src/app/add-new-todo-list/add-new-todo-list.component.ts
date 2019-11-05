@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { List } from '../model';
 import { DataService } from '../service/data-service.service';
 
 @Component({
@@ -9,13 +8,13 @@ import { DataService } from '../service/data-service.service';
   providers: [DataService],
 })
 export class AddNewTodoListComponent {
-  list: List = {
-    id = '',
-    name = '',
-    item = [],
-  };
-  constructor(dataService: DataService) {
-    this.list = dataService.listData();
-  }
-}
+    list = [];
+    listTitle = '';
+    item = [];
+
+    constructor(
+      dataService: DataService
+    ){
+      this.list = dataService.listData();
+    }
 }
