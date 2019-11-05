@@ -1,17 +1,3 @@
-
 <div class="item" *ngFor="let Item of itemsList">
-    <div class="item-header">
-        <h1 class="item-title">{{ Item.id }}</h1>
-        <div class="item-list">
-            <img class="icon-registry" src="https://img.icons8.com/pastel-glyph/64/000000/spiral-bound-booklet.png">
-            <p class="list">{{ Item.name }}</p>
-        </div>
-    </div>
-    <div class="item-content" *ngFor="let spec of Item.item">
-        <p class="item-descr">{{ spec.list }}</p>
-        <p class="item-descr">{{ spec.id }}</p>
-        <p class="item-descr">{{ spec.title }}</p>
-        <p class="item-descr">{{ spec.description }}</p>
-        <p class="item-descr">{{ spec.completed }}</p>
-    </div>
+    <app-todo-item class="item-content" *ngFor="let spec of Item.item" [item]="spec"></app-todo-item> 
 </div>

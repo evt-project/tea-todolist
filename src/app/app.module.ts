@@ -9,8 +9,8 @@ import { ViewItemComponent } from './view-item/view-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     AddItemComponent,
+    AppComponent,
     ListComponent,
     ViewItemComponent,
   ],
