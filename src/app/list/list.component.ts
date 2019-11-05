@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { DataService } from '../service/data-service.service';
 
 @Component({
-  selector: 'app-list-item',
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss'],
+  selector: 'app-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss'],
   providers: [DataService],
 })
-export class ListItemComponent {
+export class ListComponent {
   itemsList = [];
   constructor(dataService: DataService) {
     this.itemsList = dataService.listData();
