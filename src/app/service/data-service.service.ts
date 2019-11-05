@@ -35,6 +35,22 @@ export class DataService {
 
   ];
 
+  loadXML() {
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      // 4 ->  request finished and response is ready
+      // 200 -> return status OK of the request
+      if (this.readyState === 4 && this.status === 200) {
+        const xmlDoc = this.responseXML;
+        console.log(xmlDoc);
+      }else if(this.status !== 200){
+        console.log('Page response whit a: ' + this.status + 'error!');
+      }
+    };
+    xmlhttp.open('GET', '../assets/data/data.xml', true);
+    xmlhttp.send();
+  }
+
   listData() {
     return this.data;
   }
