@@ -13,8 +13,8 @@ export class AddNewTodoListComponent {
     item = [];
 
     constructor(
-      dataService: DataService
-    ){
+      dataService: DataService,
+    ) {
       this.list = dataService.listData();
     }
 }
