@@ -8,10 +8,12 @@ import { DataService } from '../service/data-service.service';
   providers: [DataService],
 })
 export class ListComponent {
-  lists = [];
+
+  lists = this.dataService.listData();
+
   constructor(
-    dataService: DataService,
+    readonly dataService: DataService,
     ) {
-    this.lists = dataService.listData();
-  }
+        this.lists = dataService.listData();
+      }
 }
