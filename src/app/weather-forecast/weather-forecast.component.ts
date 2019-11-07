@@ -1,22 +1,25 @@
-import {Component, OnInit} from '@angular/core';
-import { WeatherForecastApiService } from './weatherForecastApiService/weather-forecast-api.service';
+import { Component } from '@angular/core';
+import { WeatherClass } from '../weatherObject/weather-class';
 
 @Component({
     selector: 'app-weather-forecast',
     templateUrl: './weather-forecast.component.html',
     styleUrls: ['./weather-forecast.component.scss'],
 })
-export class WeatherForecastComponent implements OnInit {
-    response: object;
-    constructor(private wfas: WeatherForecastApiService) {}
-
-    ngOnInit() {
-        this.retriveWF();
+export class WeatherForecastComponent  {
+    public weather: WeatherFeature;
+    constructor(
+        private weatherClass: WeatherClass,
+    ) {
+        this.retriveWeatherForecast();
     }
-    private retriveWF() {
-        this.wfas.getOBS().subscribe((response) => {
-            this.response = response;
-            // console.log(this.response);
-        });
+
+    private retriveWeatherForecast() {
+        this.weatherClass.weatherFeature.subscribe(
+            (weatherFeature) => {
+                this.weather = weatherFeature
+                weatherFeature
+            },
+        );
     }
 }
