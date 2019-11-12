@@ -1,10 +1,5 @@
 <div class="weatherForecastSpace">
-
-    <div *ngFor="let f of weather | keyvalue">
-    {{f.key}}:{{f.value}}
-    <!--<h2>{{response.name}} weather forecast</h2>
-    <h3>{{((response.main.temp -273.15)-1) | number:'1.0-0'}}°</h3>
-    <h3>Pressure {{response.main.pressure}} torr.</h3>
-    <h3>{{response.weather[0].main}}</h3>-->
+    <div *ngFor = "let weatherField of weather | keyvalue">
+        <h3>{{weatherField.value}}</h3>
     </div>
 </div>
