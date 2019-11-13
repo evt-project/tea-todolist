@@ -12,6 +12,14 @@ export class AddNewTodoListComponent {
     listTitle = '';
     item = [];
 
+    addList() {
+      this.list.push({
+        list: this.list,
+        id: '',
+        title: this.listTitle,
+      });
+    }
+
     constructor(
       dataService: DataService,
     ) {
