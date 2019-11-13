@@ -13,7 +13,6 @@ export class ListComponent {
 
   constructor(
     readonly dataService: DataService,
-    ) {
-        this.lists = dataService.listData();
-      }
+  ) {
+  }
 }
