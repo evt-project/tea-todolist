@@ -10,7 +10,6 @@ import { DataService } from '../service/data-service.service';
 export class AddNewTodoListComponent {
     list = [];
     listTitle = '';
-    item = [];
 
     addList() {
       this.list.push({
