@@ -10,11 +10,11 @@ export class WeatherForecastApiService {
     ) { }
 
     public getWeatherData(cityName: string, stateAcronym: string) {
-        const s = 'https://api.openweathermap.org/data/2.5/weather?q=' +
-                   cityName +
-                   ',' +
-                   stateAcronym +
-                   '&appid=d5754a8efdf1ead276cffa4f8250f1e1';
+        const s = `https://api.openweathermap.org/data/2.5/weather?q= +
+                   ${cityName} +
+                   , +
+                   ${stateAcronym} +
+                   &appid=d5754a8efdf1ead276cffa4f8250f1e1`;
 
         return this.http.get(s);
     }

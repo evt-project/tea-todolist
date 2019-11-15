@@ -12,3 +12,10 @@ export interface Item {
     description?: string;
     completed: boolean;
 }
+
+export interface WeatherFeature {
+    cityName: string;
+    degrees: string;
+    pressure: string;
+    sky: string;
+}
