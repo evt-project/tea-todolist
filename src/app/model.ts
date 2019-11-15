@@ -19,3 +19,15 @@ export interface WeatherFeature {
     pressure: string;
     sky: string;
 }
+
+export interface WeatherAPIModel {
+    weather: Array<{
+        main: string,
+        description?: string,
+    }>;
+    name: string;
+    main: {
+        temp: number;
+        pressure: number;
+    };
+}
