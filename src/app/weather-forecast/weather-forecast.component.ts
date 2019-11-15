@@ -16,7 +16,7 @@ export class WeatherForecastComponent implements OnDestroy {
     weather: WeatherFeature;
 
     constructor(
-            public weatherData: WeatherForecastApiService,
+        public weatherData: WeatherForecastApiService,
     ) {
         this.subscription = this.weatherData.getWeatherData(this.city, this.state).subscribe((response) => {
             this.weather = response;

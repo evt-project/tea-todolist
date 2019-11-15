@@ -8,8 +8,9 @@ import { WeatherAPIModel } from 'src/app/model';
 })
 export class WeatherForecastApiService {
     constructor(
-            private http: HttpClient,
-    ) { }
+        private http: HttpClient,
+    ) {
+    }
 
     public getWeatherData(cityName: string, stateAcronym: string) {
         const s = `https://api.openweathermap.org/data/2.5/weather?q=
