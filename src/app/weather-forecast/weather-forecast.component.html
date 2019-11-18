@@ -1,0 +1,5 @@
+<div class="weatherForecastSpace">
+    <div *ngFor = "let weatherField of weather | keyvalue">
+        <h3>{{weatherField.value}}</h3>
+    </div>
+</div>
